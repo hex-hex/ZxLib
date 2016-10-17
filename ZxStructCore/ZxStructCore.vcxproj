@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D1D78CE-17D3-400E-B562-0049FA14FA15}</ProjectGuid>
+    <RootNamespace>ZxStructCore</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\ZxStructCore.def</ModuleDefinitionFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\ZxStructCore.def</ModuleDefinitionFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib</IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>4294967296</StackReserveSize>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\ZxStructCore.def</ModuleDefinitionFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\ZxStructCore.def</ModuleDefinitionFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <StackReserveSize>4294967296</StackReserveSize>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\ZxStructCore.rc2" />
+    <None Include="ZxStructCore.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lsd.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Zx2DPoint.cpp" />
+    <ClCompile Include="Zx2DPointChain.cpp" />
+    <ClCompile Include="Zx3DPoint.cpp" />
+    <ClCompile Include="ZxAccessBase.cpp" />
+    <ClCompile Include="ZxBipartieNonweight.cpp" />
+    <ClCompile Include="ZxBoolMatrix.cpp" />
+    <ClCompile Include="ZxClassifierBase.cpp" />
+    <ClCompile Include="ZxClassifierKNearest.cpp" />
+    <ClCompile Include="ZxClassifierNormalBayes.cpp" />
+    <ClCompile Include="ZxClassifierSVM.cpp" />
+    <ClCompile Include="ZxColorBase.cpp" />
+    <ClCompile Include="ZxData.cpp" />
+    <ClCompile Include="ZxFileAbstract.cpp" />
+    <ClCompile Include="ZxFileBase.cpp" />
+    <ClCompile Include="ZxFileIO.cpp" />
+    <ClCompile Include="ZxFolderBase.cpp" />
+    <ClCompile Include="ZxFolderParse.cpp" />
+    <ClCompile Include="ZxFolderParseFilterBase.cpp" />
+    <ClCompile Include="ZxGeoRef.cpp" />
+    <ClCompile Include="ZxGeoTrans.cpp" />
+    <ClCompile Include="ZxGraph.cpp" />
+    <ClCompile Include="ZxGraphBranch.cpp" />
+    <ClCompile Include="ZxGraphElement.cpp" />
+    <ClCompile Include="ZxGraphElementPtr.cpp" />
+    <ClCompile Include="ZxGraphNode.cpp" />
+    <ClCompile Include="ZxImg64Bit.cpp" />
+    <ClCompile Include="ZxImgBase.cpp" />
+    <ClCompile Include="ZxImg32Bit.cpp" />
+    <ClCompile Include="ZxImgFileBase.cpp" />
+    <ClCompile Include="ZxImgFileManager.cpp" />
+    <ClCompile Include="ZxImgFileRead.cpp" />
+    <ClCompile Include="ZxImgFileWrite.cpp" />
+    <ClCompile Include="ZxImgMask.cpp" />
+    <ClCompile Include="ZxImgMonochrome.cpp" />
+    <ClCompile Include="ZxImg24Bit.cpp" />
+    <ClCompile Include="ZxLogFile.cpp" />
+    <ClCompile Include="ZxMatrix.cpp" />
+    <ClCompile Include="ZxPolygon.cpp" />
+    <ClCompile Include="ZxProgress.cpp" />
+    <ClCompile Include="ZxQuadTree.cpp" />
+    <ClCompile Include="ZxRectangle.cpp" />
+    <ClCompile Include="ZxSolveElement.cpp" />
+    <ClCompile Include="ZxSolveElementFilter.cpp" />
+    <ClCompile Include="ZxSolveModelBase.cpp" />
+    <ClCompile Include="ZxSolveModelParamBase.cpp" />
+    <ClCompile Include="ZxSolveModelParamIndexElement.cpp" />
+    <ClCompile Include="ZxStructCore.cpp" />
+    <ClCompile Include="ZxSymBoolMatrix.cpp" />
+    <ClCompile Include="ZxTimeLog.cpp" />
+    <ClCompile Include="ZxTimeNode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lsd.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Zx2DPoint.h" />
+    <ClInclude Include="Zx2DPointChain.h" />
+    <ClInclude Include="Zx3DPoint.h" />
+    <ClInclude Include="ZxAccessBase.h" />
+    <ClInclude Include="ZxBipartieNonweight.h" />
+    <ClInclude Include="ZxBoolMatrix.h" />
+    <ClInclude Include="ZxClassifierBase.h" />
+    <ClInclude Include="ZxClassifierKNearest.h" />
+    <ClInclude Include="ZxClassifierNormalBayes.h" />
+    <ClInclude Include="ZxClassifierSVM.h" />
+    <ClInclude Include="ZxColorBase.h" />
+    <ClInclude Include="ZxData.h" />
+    <ClInclude Include="ZxFileAbstract.h" />
+    <ClInclude Include="ZxFileBase.h" />
+    <ClInclude Include="ZxFolderBase.h" />
+    <ClInclude Include="ZxFolderParse.h" />
+    <ClInclude Include="ZxFolderParseFilterBase.h" />
+    <ClInclude Include="ZxGeoRef.h" />
+    <ClInclude Include="ZxGeoTrans.h" />
+    <ClInclude Include="ZxGraph.h" />
+    <ClInclude Include="ZxGraphBranch.h" />
+    <ClInclude Include="ZxGraphElement.h" />
+    <ClInclude Include="ZxGraphNode.h" />
+    <ClInclude Include="ZxImg64Bit.h" />
+    <ClInclude Include="ZxImgBase.h" />
+    <ClInclude Include="ZxImg32Bit.h" />
+    <ClInclude Include="ZxImgFileBase.h" />
+    <ClInclude Include="ZxImgFileManager.h" />
+    <ClInclude Include="ZxImgFileRead.h" />
+    <ClInclude Include="ZxImgFileWrite.h" />
+    <ClInclude Include="ZxImgMask.h" />
+    <ClInclude Include="ZxImgMonochrome.h" />
+    <ClInclude Include="ZxImg24Bit.h" />
+    <ClInclude Include="ZxLogFile.h" />
+    <ClInclude Include="ZxMatrix.h" />
+    <ClInclude Include="ZxPolygon.h" />
+    <ClInclude Include="ZxProgress.h" />
+    <ClInclude Include="ZxQuadTree.h" />
+    <ClInclude Include="ZxRectangle.h" />
+    <ClInclude Include="ZxSolveElement.h" />
+    <ClInclude Include="ZxSolveElementFilter.h" />
+    <ClInclude Include="ZxSolveModelBase.h" />
+    <ClInclude Include="ZxSolveModelParamBase.h" />
+    <ClInclude Include="ZxSolveModelParamIndexElement.h" />
+    <ClInclude Include="ZxStructCoreInterface.h" />
+    <ClInclude Include="ZxSymBoolMatrix.h" />
+    <ClInclude Include="ZxTimeLog.h" />
+    <ClInclude Include="ZxTimeNode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ZxStructCore.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ZxStructCore.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
