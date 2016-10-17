@@ -1,2 +1,2 @@
 # ZxLib
-Classes for geographic image processing development based on OpenCV and GDAL
+Classes for geographic image processing development based on OpenCV, GDAL and vl_feat
